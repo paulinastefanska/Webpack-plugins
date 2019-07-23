@@ -1,7 +1,14 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+plugins = [new HtmlWebpackPlugin({
+	template: 'src/index.html',
+	filename: 'index.html',
+	inject: 'body'
+})]
 
 module.exports = (env) => {
-    const environment = env || 'production';
+	const environment = env || 'production';
 
 	return {
 		mode: environment,
