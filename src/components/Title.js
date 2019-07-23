@@ -1,15 +1,10 @@
 import React from 'react';
-import Todo from './Todo'
+import style from "./Title.css";
 
-class Title extends React.Component {
-	render () {
-		return (
-			<div className="title">
-				<h1>To do List:</h1>
-				<ul>{ this.props.data }</ul>
-			</div>	
-		);
-	}
-}
+const Title = props => 
+	<div className={style.titleText}>
+		<h1>{props.title}</h1>
+	    <p>You have: {props.numberOfTasks} tasks to do!</p>
+	</div>;
 
 export default Title;
